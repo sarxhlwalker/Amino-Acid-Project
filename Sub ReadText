@@ -127,9 +127,8 @@ For k = LBound(Sources) To UBound(Sources)
     StrLineElements = Split(Targets(k), Delimiter)
     For j = LBound(StrLineElements) To UBound(StrLineElements)
         If StrLineElements(j) <> "" Then
-            Cells(testValue, j + 1).Value = StrLineElements(j)
+            Cells(testValue, j + 2).Value = StrLineElements(j)
         End If
-    'Cells(testValue, 2).Value = Targets(k)
         Next j
     testValue = testValue + 1
     Next k
