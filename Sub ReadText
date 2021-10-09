@@ -1,0 +1,137 @@
+Public Sub ReadText()
+
+Dim FilePath As String
+Dim line As String
+Dim FSO As New FileSystemObject
+Dim TSO As Object
+Dim lineElements As Variant
+Dim i As Long
+Dim FileNum As Integer
+
+Set FSO = CreateObject("Scripting.FileSystemObject")
+Set TSO = FSO.OpenTextFile("C:\Users\Owner\Desktop\file.txt")
+
+Dim AcidCode As Dictionary
+Set AcidCode = New Dictionary
+
+With AcidCode
+
+    .Add Key:="Ala", Item:="A"
+    .Add Key:="Arg", Item:="R"
+    .Add Key:="Asn", Item:="N"
+    .Add Key:="Asp", Item:="D"
+    .Add Key:="Cys", Item:="C"
+    .Add Key:="Gln", Item:="Q"
+    .Add Key:="Glu", Item:="E"
+    .Add Key:="Gly", Item:="G"
+    .Add Key:="His", Item:="H"
+    .Add Key:="Ile", Item:="I"
+    .Add Key:="Leu", Item:="L"
+    .Add Key:="Lys", Item:="K"
+    .Add Key:="Met", Item:="M"
+    .Add Key:="Phe", Item:="F"
+    .Add Key:="Pro", Item:="P"
+    .Add Key:="Ser", Item:="S"
+    .Add Key:="Thr", Item:="T"
+    .Add Key:="Trp", Item:="W"
+    .Add Key:="Tyr", Item:="Y"
+    .Add Key:="Val", Item:="V"
+
+End With
+
+Dim line_number As Integer
+
+Dim Source As String
+Dim Target As String
+
+Dim Sources() As String
+ReDim Sources(1)
+Sources(1) = ""
+
+Dim Targets() As String
+ReDim Targets(1)
+Targets(1) = ""
+
+Dim CollectTargets() As String
+ReDim SumTargets(1)
+SumTargets(1) = ""
+
+Dim truth As Boolean
+
+Do While TSO.AtEndOfStream = False
+    line = TSO.ReadLine
+    Dim Temp As String
+    Dim temp2 As String
+    
+    Dim lineLength As Integer
+    lineLength = Len(line)
+    
+    truth = False
+    
+    If lineLength = 17 Then
+        Temp = Mid(line, 10, 3)
+        Source = AcidCode.Item(Temp) & Mid(line, 14, 3)
+        
+        temp2 = Left(line, 3)
+        ReDim Preserve SumTargets(UBound(SumTargets) + 1)
+        SumTargets(UBound(SumTargets)) = AcidCode.Item(temp2) & Mid(line, 5, 3)
+        
+        For i = LBound(Sources) To UBound(Sources)
+            If Sources(i) = Source Then
+                If InStr(Targets(i), Target) = 0 Then
+                    Target = AcidCode.Item(temp2) & Mid(line, 5, 3) & ","
+                    Targets(i) = Targets(i) & Target & ","
+                End If
+                truth = True
+            End If
+        Next i
+        If truth = False Then
+            ReDim Preserve Sources(UBound(Sources) + 1)
+            Sources(UBound(Sources)) = Source
+            ReDim Preserve Targets(UBound(Targets) + 1)
+            Targets(UBound(Targets)) = AcidCode.Item(temp2) & Mid(line, 5, 3) & ","
+        End If
+    ElseIf lineLength = 10 Then
+        Source = AcidCode.Item(Mid(line, 3, 3)) & Mid(line, 7, 3)
+        Target = SumTargets(UBound(SumTargets) - 1)
+        For i = LBound(Sources) To UBound(Sources)
+            If Sources(i) = Source Then
+                If InStr(Targets(i), Target) = 0 Then
+                    Targets(i) = Targets(i) & Target & ","
+                End If
+                truth = True
+            End If
+        Next i
+        If truth = False Then
+            ReDim Preserve Sources(UBound(Sources) + 1)
+            Sources(UBound(Sources)) = Source
+            ReDim Preserve Targets(UBound(Targets) + 1)
+            Targets(UBound(Targets)) = Targets(i) & Target & ","
+        End If
+    End If
+Loop
+TSO.Close
+Set TSO = Nothing
+Set FSO = Nothing
+
+Dim Delimiter As String
+Delimiter = ","
+Dim Index As Long
+Index = 1
+Dim StrLineElements As Variant
+
+Dim testValue As Integer
+testValue = 1
+For k = LBound(Sources) To UBound(Sources)
+    Cells(testValue, 1).Value = Sources(k)
+    StrLineElements = Split(Targets(k), Delimiter)
+    For j = LBound(StrLineElements) To UBound(StrLineElements)
+        If StrLineElements(j) <> "" Then
+            Cells(testValue, j + 1).Value = StrLineElements(j)
+        End If
+    'Cells(testValue, 2).Value = Targets(k)
+        Next j
+    testValue = testValue + 1
+    Next k
+
+End Sub
