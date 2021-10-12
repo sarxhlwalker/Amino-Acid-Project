@@ -126,7 +126,7 @@ For k = LBound(Sources) To UBound(Sources)
     Cells(testValue, 1).Value = Sources(k)
     StrLineElements = Split(Targets(k), Delimiter)
     For j = LBound(StrLineElements) To UBound(StrLineElements)
-        If StrLineElements(j) <> "" Then
+        If Rows(testValue).Find(StrLineElements(j)) Is Nothing Then
             Cells(testValue, j + 2).Value = StrLineElements(j)
         End If
         Next j
