@@ -1,0 +1,573 @@
+Asp	494A	Thr	250A
+Lys	509A	Gly	243A
+Lys	509A	Gly	243A
+		Ile	252A
+Tyr	510A	Thr	242A
+		Gly	243A
+		Gly	243A
+			
+Tyr	510A	Thr	242A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+Tyr	510A	Thr	242A
+			
+		Thr	242A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+Gln	512A	Ile	252A
+			
+Gln	512A	Ile	252A
+			
+Thr	513A	Gly	243A
+			
+		Ile	252A
+			
+Thr	513A	Gly	243A
+			
+		Ile	252A
+			
+		Ile	252A
+			
+		Thr	246A
+			
+Thr	513A	Thr	246A
+			
+Thr	513A	Gly	243A
+			
+		Ile	252A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+		Met	245A
+
+		Thr	246A
+			
+Thr	513A	Thr	246A
+			
+		Thr	246A
+			
+Thr	513A	Gly	243A
+			
+		Ile	252A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+		Met	245A
+			
+		Met	245A
+			
+		Ile	252A
+			
+		Gln	244A
+			
+		Gln	244A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Met	245A
+			
+		Met	245A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+Thr	513A	Gly	243A
+			
+		Ile	252A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+		Ile	252A
+			
+		Gln	244A
+			
+Arg	516A	Thr	246A
+			
+Arg	516A	Thr	246A
+			
+Arg	516A	Thr	246A
+			
+Arg	516A	Thr	246A
+			
+Arg	516A	Thr	246A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+Arg	516A	Thr	250A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+Arg	516A	Thr	250A
+			
+		Pro	253A
+			
+		Gln	251A
+			
+Arg	516A	Thr	250A
+			
+		Thr	250A
+			
+Arg	516A	Thr	250A
+			
+		Thr	250A
+			
+		Gln	251A
+			
+Trp	517A	Thr	246A
+			
+		Thr	246A
+			
+Trp	517A	Thr	246A
+			
+		Thr	246A
+			
+Trp	517A	Pro	247A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+Trp	517A	Phe	248A
+			
+Trp	517A	Phe	248A
+			
+		Phe	248A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Thr	246A
+			
+Trp	517A	Phe	248A
+			
+		Phe	248A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Thr	246A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Trp	517A	Pro	247A
+			
+		Pro	247A
+			
+Trp	517A	Phe	248A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+Trp	517A	Phe	248A
+			
+		Phe	248A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+Glu	520A	Phe	248A
+			
+Glu	520A	Phe	248A
+			
+		Phe	248A
+			
+Glu	520A	Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Glu	520A	Phe	248A
+			
+Glu	520A	Phe	248A
+			
+		Thr	246A
+			
+		Phe	248A
+			
+		Thr	250A
+			
+Glu	520A	Phe	248A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Thr	250A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Thr	250A
+			
+Glu	520A	Thr	246A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+		Thr	250A
+			
+Glu	520A	Phe	248A
+			
+		Phe	248A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Thr	250A
+			
+		Thr	246A
+			
+		Thr	246A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Thr	250A
+			
+		Phe	248A
+			
+Leu	521A	Phe	248A
+			
+Leu	521A	Phe	248A
+			
+Leu	521A	Phe	248A
+			
+		Phe	248A
+			
+Leu	521A	Phe	248A
+			
+		Phe	248A
+			
+Gln	524A	Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Gln	524A	Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Gln	524A	Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Arg	735A	Glu	237A
+			
+Arg	735A	Glu	233A
+			
+		Glu	237A
+			
+Arg	735A	Glu	237A
+			
+		Glu	233A
+			
+		Glu	233A
+			
+		Glu	237A
+			
+		Glu	237A
+			
+Arg	735A	Glu	233A
+			
+		Glu	233A
+			
+		Glu	237A
+			
+		Glu	233A
+			
+Arg	735A	Glu	233A
+			
+		Glu	233A
+			
+		Glu	237A
+			
+Asn	739A	Pro	247A
+			
+Asn	739A	Pro	247A
+			
+		Pro	247A
+			
+Asn	739A	Glu	237A
+			
+Pro	740A	Pro	247A
+			
+Pro	740A	Pro	247A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Pro	740A	Phe	248A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Pro	740A	Phe	248A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Pro	740A	Phe	248A
+			
+		Phe	248A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+		Phe	248A
+			
+		Phe	248A
+			
+Pro	740A	Phe	248A
+			
+Leu	743A	Pro	247A
+			
+Leu	743A	Pro	247A
+			
+Leu	743A	Pro	247A
+			
+Leu	743A	Ile	240A
+			
+		Ile	240A
+			
+		Pro	247A
+			
+		Pro	247A
+			
+Arg	744A	Arg	241A
+			
+Arg	745A	Arg	241A
+			
+Arg	745A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Arg	745A	Arg	241A
+			
+		Arg	241A
+			
+		Ile	240A
+			
+		Ile	240A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Arg	745A	Arg	241A
+			
+		Arg	241A
+			
+		Ile	240A
+			
+		Ile	240A
+			
+		Gly	243A
+			
+		Gly	243A
+			
+		Arg	241A
+			
+Arg	745A	Gly	243A
+			
+Met	746A	Arg	241A
+			
+Met	746A	Arg	241A
+			
+Met	746A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Met	746A	Arg	241A
+			
+Met	746A	Arg	241A
+			
+		Arg	241A
+			
+Ser	748A	Arg	241A
+			
+Asp	749A	Arg	241A
+			
+Asp	749A	Arg	241A
+			
+Asp	749A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Thr	242A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Asp	749A	Arg	241A
+			
+		Thr	242A
+			
+		Thr	242A
+			
+		Thr	242A
+			
+		Thr	242A
+			
+Asp	749A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Asp	749A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Asp	749A	Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+		Arg	241A
+			
+Val	750A	Arg	241A
