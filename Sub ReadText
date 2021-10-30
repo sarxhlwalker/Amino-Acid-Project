@@ -60,7 +60,7 @@ Dim truth As Boolean
 
 Do While TSO.AtEndOfStream = False
     line = TSO.ReadLine
-    Dim Temp As String
+    Dim temp As String
     Dim temp2 As String
     
     Dim lineLength As Integer
@@ -69,8 +69,8 @@ Do While TSO.AtEndOfStream = False
     truth = False
     
     If lineLength = 17 Then
-        Temp = Mid(line, 10, 3)
-        Source = AcidCode.Item(Temp) & Mid(line, 14, 3)
+        temp = Mid(line, 10, 3)
+        Source = AcidCode.Item(temp) & Mid(line, 14, 3)
         
         temp2 = Left(line, 3)
         ReDim Preserve SumTargets(UBound(SumTargets) + 1)
@@ -119,6 +119,8 @@ Delimiter = ","
 Dim Index As Long
 Index = 1
 Dim StrLineElements As Variant
+Dim temp1 As String
+Dim l31, l32 As Integer
 
 Dim testValue As Integer
 testValue = 1
@@ -132,5 +134,32 @@ For k = LBound(Sources) To UBound(Sources)
         Next j
     testValue = testValue + 1
     Next k
+
+
+Dim x As Integer
+x = 5
+While x <> 0
+    For Row = 3 To 20 Step 1
+        For Col = 2 To 10 Step 1
+            If IsEmpty(Cells(Row, Col).Value) Then
+                Cells(Row, Col).Delete shift:=xlToLeft
+            End If
+        Next Col
+    Next Row
+x = x - 1
+Wend
+
+Dim hold As String
+For Row = 3 To 20 Step 1
+    For Col = 2 To 10 Step 1
+        If Not IsEmpty(Cells(Row, Col + 1).Value) Then
+            If CInt(Mid(Cells(Row, Col).Value, 2, 3)) > CInt(Mid(Cells(Row, Col + 1).Value, 2, 3)) Then
+                hold = Cells(Row, Col).Value
+                Cells(Row, Col).Value = Cells(Row, Col + 1).Value
+                Cells(Row, Col + 1).Value = hold
+            End If
+        End If
+    Next Col
+Next Row
 
 End Sub
