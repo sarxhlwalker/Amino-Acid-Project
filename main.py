@@ -26,8 +26,10 @@ def read_file(filename: str, endfile: str) -> None:
     sort_horiz(print_list)
     sort_vert(print_list)
 
-    endfile = endfile + '.txt'
+    endfile = endfile
     with open(endfile, 'w') as w:
+        w.write('source atoms,target atoms--')
+        w.write('\n')
         for i in print_list:
             w.write(str(i))
             w.write('\n')
@@ -82,7 +84,7 @@ def cut_list(new_array: list) -> list:
 
 def sort_horiz(print_list: list) -> None:
     """
-    Mutate print_list such that each target value is sorted by its 3-digit numerical code.
+    Mutate print_list such that each target value is sorted by its numerical code.
     """
     for j in range(len(print_list)):
         s = str(print_list[j])
@@ -98,8 +100,7 @@ def sort_horiz(print_list: list) -> None:
 
 def sort_vert(print_list: list) -> None:
     """
-    Mutate print_list such that each column is sorted by the numerical code
-        of its first value.
+    Mutate print_list such that each column is sorted by the numerical code of its first value.
     """
     for i in range(len(print_list)):
         index = print_list[i].find(',')
