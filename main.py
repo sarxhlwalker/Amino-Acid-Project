@@ -21,7 +21,8 @@ def read_file(filename: str, endfile: str) -> None:
             new_array.append(lines[i].split())
     mutate_list(new_array)
     print_list = cut_list(new_array)
-    sort_list(print_list)
+    sort_horiz(print_list)
+    sort_vert(print_list)
 
     endfile = endfile + '.txt'
     with open(endfile, 'w') as w:
@@ -35,7 +36,7 @@ def mutate_list(new_array: list) -> None:
     Mutate new_array such that its amino acid codes are 1-digit long instead of 3-digits,
         unnecessary information has been removed, and each element is in a csv formatting.
     """
-    for i in range(len(new_array) - 1):
+    for i in range(len(new_array)):
         if new_array[i][0] == '...':
             start = new_array[i - 1][0:4]
             if new_array[i][1] in AcidCode:
@@ -64,7 +65,6 @@ def cut_list(new_array: list) -> list:
     """
     print_list = []
     keys = []
-    # breakpoint()
     for x in new_array:
         if x[0:4] not in keys:
             print_list.append(x)
@@ -76,7 +76,7 @@ def cut_list(new_array: list) -> list:
     return print_list
 
 
-def sort_list(print_list: list) -> None:
+def sort_horiz(print_list: list) -> None:
     """
     Mutate print_list such that each target value is sorted by its 3-digit numerical code.
     """
@@ -86,10 +86,22 @@ def sort_list(print_list: list) -> None:
         n = len(line)
         for i in range(0, n):
             for k in range(1, n - i - 1):
-                if int(line[k][1:]) < int(line[k + 1][1:]):
+                if int(line[k][1:]) > int(line[k + 1][1:]):
                     line[k], line[k + 1] = line[k + 1], line[k]
         s = str.join(',', line)
         print_list[j] = s
+
+
+def sort_vert(print_list: list) -> None:
+    """
+    Mutate print_list such that each column is sorted by the 3-digit numerical code
+        of its first value.
+    """
+    # breakpoint()
+    for i in range(len(print_list)):
+        for j in range(len(print_list) - 1):
+            if int(print_list[j][1:4]) > int(print_list[j + 1][1:4]):
+                print_list[j], print_list[j + 1] = print_list[j + 1], print_list[j]
 
 
 # Press the green button in the gutter to run the script.
