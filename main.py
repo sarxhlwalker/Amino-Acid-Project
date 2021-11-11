@@ -97,7 +97,6 @@ def sort_vert(print_list: list) -> None:
     Mutate print_list such that each column is sorted by the 3-digit numerical code
         of its first value.
     """
-    # breakpoint()
     for i in range(len(print_list)):
         for j in range(len(print_list) - 1):
             if int(print_list[j][1:4]) > int(print_list[j + 1][1:4]):
