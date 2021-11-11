@@ -98,12 +98,13 @@ def sort_horiz(print_list: list) -> None:
 
 def sort_vert(print_list: list) -> None:
     """
-    Mutate print_list such that each column is sorted by the 3-digit numerical code
+    Mutate print_list such that each column is sorted by the numerical code
         of its first value.
     """
     for i in range(len(print_list)):
+        index = print_list[i].find(',')
         for j in range(len(print_list) - 1):
-            if int(print_list[j][1:4]) > int(print_list[j + 1][1:4]):
+            if int(print_list[j][1:index]) > int(print_list[j + 1][1:index]):
                 print_list[j], print_list[j + 1] = print_list[j + 1], print_list[j]
 
 
