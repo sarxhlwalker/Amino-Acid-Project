@@ -3,6 +3,8 @@
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
+import pprint
+
 AcidCode = {
     'Ala': 'A', 'Arg': 'R', 'Asn': 'N', 'Asp': 'D', 'Cys': 'C', 'Gln': 'Q', 'Glu': 'E', 'Gly': 'G',
     'His': 'H', 'Ile': 'I', 'Leu': 'L', 'Lys': 'K', 'Met': 'M', 'Phe': 'F', 'Pro': 'P', 'Ser': 'S',
@@ -38,23 +40,24 @@ def mutate_list(new_array: list) -> None:
     """
     for i in range(len(new_array)):
         if new_array[i][0] == '...':
-            start = new_array[i - 1][0:4]
+            index = new_array[i - 1].find(',')
+            start = new_array[i - 1][0:index]
             if new_array[i][1] in AcidCode:
-                end = AcidCode[new_array[i][1]] + new_array[i][2][0:3]
+                end = AcidCode[new_array[i][1]] + new_array[i][2][0:-1]
             else:
-                end = new_array[i][1] + new_array[i][2][0:3]
+                end = new_array[i][1] + new_array[i][2][0:-1]
         elif new_array[i][0] in AcidCode:
-            start = AcidCode[new_array[i][0]] + new_array[i][1][0:3]
+            start = AcidCode[new_array[i][0]] + new_array[i][1][0:-1]
             if new_array[i][4] in AcidCode:
-                end = AcidCode[new_array[i][4]] + new_array[i][5][0:3]
+                end = AcidCode[new_array[i][4]] + new_array[i][5][0:-1]
             else:
-                end = new_array[i][4] + new_array[i][5][0:3]
+                end = new_array[i][4] + new_array[i][5][0:-1]
         else:
-            start = new_array[i][0] + new_array[i][1][0:3]
+            start = new_array[i][0] + new_array[i][1][0:-1]
             if new_array[i][4] in AcidCode:
-                end = AcidCode[new_array[i][4]] + new_array[i][5][0:3]
+                end = AcidCode[new_array[i][4]] + new_array[i][5][0:-1]
             else:
-                end = new_array[i][4] + new_array[i][5][0:3]
+                end = new_array[i][4] + new_array[i][5][0:-1]
         line = start + ',' + end
         new_array[i] = line
 
@@ -66,13 +69,14 @@ def cut_list(new_array: list) -> list:
     print_list = []
     keys = []
     for x in new_array:
-        if x[0:4] not in keys:
+        index = x.find(',')
+        if x[0:index] not in keys:
             print_list.append(x)
-            keys.append(x[0:4])
+            keys.append(x[0:index])
         else:
-            val = keys.index(x[0:4])
-            if x[5:] not in print_list[val]:
-                print_list[val] = print_list[val] + x[4:]
+            val = keys.index(x[0:index])
+            if x[index + 1:] not in print_list[val]:
+                print_list[val] = print_list[val] + x[index:]
     return print_list
 
 
